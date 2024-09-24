@@ -12,12 +12,6 @@ export const metadata: Metadata = {
   description: "Powered by WalletConnect"
 };
 
-globalThis.open = (function (open) {
-	return function (url, _, features) {
-		return open.call(window, url, "_blank", features);
-	};
-})(globalThis.open);
-
 export default function RootLayout({
   children
 }: Readonly<{
